@@ -1,16 +1,21 @@
+@font-face{
+    font-family: 'sniglet';
+    src:url(font/sniglet.ttf);
+}
+
 body{
     background-color: #ffefce;
 }
 
 h1{
     color: #f76b4c;
-    font-family: sans-serif;
+    font-family: "sniglet";
     font-size: 5em;
 }
 
 p{
     color: #3d3334;
-    font-family: sans-serif;
+    font-family: "sniglet";
     font-size: 2em;
 
 }
