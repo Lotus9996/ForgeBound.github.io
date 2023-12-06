@@ -1,14 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <title>forgebound</title>
-    </head>
-    <body>
-        <h1>Forge Bound</h1>
-        <p>hello and welcome to Forge Bound! this website a look into my creative adventure. 
-            as I explore many diffrent topics and make many diffrent items that intrest me.</p>
-    </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Webpage Sketch</title>
+</head>
+<body>
+
+
+   
+
+<!--HEADER/HERO SECTION-->
+
+  <div class="hero-section">
+    
+   <h1 id="animated-title"><span>H</span><span>a</span><span>i</span><span>l</span><span>e</span><span>y</span><span  style='margin-right:.30em; display:inline-block;'></span> 
+    <span>M</span><span>o</span><span>n</span><span>t</span><span>a</span><span>n</span><span>o</span></h1>
+   <h1 id="brand">Forge Bound</h1>
+   <p id="about-me">a never ending journey of growth and creation.<br>
+     From art and strength to mindset and habit you are constantly <br>blooming and evolving.</p>
+   <div class="fade-in-section">
+    <div class="circle" id="c1"></div>
+    <div class="circle" id="c2"></div>
+    <div class="circle" id="c3"></div>
+    </div>
+  </div>
+
+<!--ALL IMAGES AND TEXT-->
+<div id="info">
+
+  <!--BOSTEN-->
+  <div class="scroll-in">
+  
+    <div class="image-container">
+        <img id="image1" src="Resturant.jpg" alt="Bosten Resturant">
+
+        <p class="typing-effect"> During my visit to Boston, the first thing that caught my eye was the historical architecture,
+             kindling a desire to wander into a library or bookshop.
+            While I was there we visited Newbury Street, Harvard, and MIT, witch were both Amazing.</p>
+    </div>
+
+
+    <div class="circle" id="c4"></div>
+    <div class="circle" id="c5"></div>
+  </div>
+
+
+  <!--HIKING-->
+  <div class="scroll-in">
+    <div class="image-container">
+        <img id="image2" src="hicking.jpg" alt="hicking">
+        <p class="typing-effect">Occasionally, I go Hiking with my family or friends.
+            Hiking is very exciting and enjoyable for me especially when the mountains have many beautiful flowers and trees.
+            I particularly like it when my whole family goes so I can listen to all the conversations that are going on.</p>
+    </div>
+    
+    <div class="circle" id="c6"></div>
+    <div class="circle" id="c7"></div>
+  </div>
+
+
+  <!--KAYAKING-->
+  <div class="scroll-in">
+    <div class="image-container">
+        <img  id="image3" src="kayake.jpg" alt="Kayaking with Girl Scout troop.">
+        <p class="typing-effect">I have been kayaking, canoeing , and paddleboarding since I was about 8 or 9 years old.
+            I love kayaking with my sister  seeing how fast we can go, feeling the current and wind pushing us, jumping in to and even just 
+            dipping our feet into the water.</p>
+    </div>
+    <div class="circle" id="c8"></div>
+    <div class="circle" id="c9"></div>
+  </div>
+
+
+  <!--SPACEX-->
+  <div class="scroll-in">
+    <div class="image-container">
+        <img  id="image4" src="spacex.jpg" alt="Trip to space x">
+        <p class="typing-effect">My Girl Scout troop and I got to take a tour of  SpaceX, guided by some of their Amazing employees.
+            We learned about The history of SpaceX's founding, and learned about their Spaceships Like the Falcon9 and Starship.
+            Seeing parts of their spaceship being built really made The tour a memorable Experience.
+        </p>
+    </div>
+    <div class="circle" id="c10"></div>
+    <div class="circle" id="c11"></div>
+  </div>
+</div>
+
+
+<script>
+  // APEAR SCROLL ANIMATION
+      window.addEventListener('scroll', () => {
+    document.querySelectorAll('.scroll-in').forEach((elem) => {
+      if (elem.getBoundingClientRect().top < window.innerHeight) {
+        elem.classList.add('visible');
+      }
+    });
+   });
+  // FADE IN ANIMATION
+      document.querySelectorAll('.fade-in-section').forEach((elem) => {
+      if (elem.getBoundingClientRect().top < window.innerHeight) {
+        elem.style.opacity = 1;
+      }
+    });
+
+//TEXT TYPE ANIMATON
+      document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTyping(entry.target);
+        observer.unobserve(entry.target); // Stop observing after typing starts
+        }
+      });
+      }, { threshold: 0.5 }); // Adjust threshold to control when the typing starts
+
+      document.querySelectorAll('.typing-effect').forEach((paragraph) => {
+      observer.observe(paragraph);
+      });
+
+  function startTyping(paragraph) {
+    let text = paragraph.innerHTML;
+    let i = 0;
+    paragraph.innerHTML = '';
+
+    function typeWriter() {
+      if (i < text.length) {
+        paragraph.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 15); // Adjust for typing speed
+      }
+    }
+
+    typeWriter(); // Start the typing effect
+  }
+});
+
+
+  
+
+
+//WAVE IN THE MIDDLE ANNIMATION
+
+      document.addEventListener("DOMContentLoaded", () => {
+  const title = document.querySelectorAll('#animated-title span');
+  const middle = Math.floor(title.length / 2);// Find the middle point
+
+  title.forEach((span, idx) => {
+    const delay = Math.abs(idx - middle) * 100; // Calculate delay
+
+    setTimeout(() => {
+      span.style.opacity = '1'; // Fade in
+      span.style.transform = 'translateY(0)';
+    }, delay);
+  });
+});
+
+    </script>
+
+  </body>
 </html>
+
