@@ -715,8 +715,7 @@ body {
 
 
 
-  @media screen and (min-device-width : 325px)
-  and (max-device-width: 430px) {
+  @media screen and (max-device-width: 430px) {
 
 /* FONTS & COLORS */
 
