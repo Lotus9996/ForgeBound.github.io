@@ -57,8 +57,7 @@
   z-index: -1;
   
   }
-
- /*header circles*/
+/*header circles*/
   #c1{
   background-color:var(--creamsuger);
   width: 200px;
@@ -280,159 +279,674 @@
   }
 
   
-  @media screen and (min-device-width : 360px)
-                      and (max-device-width: 1024px) {
+  @media screen and (min-device-width : 820px)
+                      and (max-device-width: 1180px) {
+    
+    /* FONTS & COLORS */
 
-    .hero-section{
-      padding-left: 10rem;
-      padding-top: 35rem;
-      padding-right: 60px;
-    }
+/* (No changes in this section) */
 
-    #animated-title span{
-      font-size: 7rem;
-    }
+:root {
+  --paper: #fffaf1;
+  --ink: #272d2d;
+  --creamsuger: #fad9ca;
+  --grass: #e9e98e;
+  --apricot: #f3ac70;
+}
 
-    /*CIRCLES*/
-  
-   /*header circles*/
-    #c1{
-    background-color:var(--creamsuger);
+body {
+  overflow-x: hidden;
+  font-family: "junction", serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper);
+}
+
+/* CIRCLES */
+
+
+#c1{
+  background-color:var(--creamsuger);
+  width: 200px;
+  height: 200px;
+  left: 60px;
+  top: 100px;
+  }
+
+  #c2{
+  background-color:var(--apricot);
+  width: 250px;
+  height: 250px;
+  left: 850px;
+  top:120px;
+  }
+
+  #c3{
+    background-color: var(--grass);
     width: 200px;
     height: 200px;
-    left: 200px;
-    top: 450px;
-    }
+    left: 800px;
+    top: 220px;
+  }
+
+/*first img circles*/
+  #c4{
+  background-color: var(--apricot);
+  width: 300px;
+  height: 300px;
+  left: 180px;
+  top: -120px;
+  }
+
+  #c5{
+  background-color: var(--creamsuger);
+  width: 200px;
+  height: 200px;
+  left: 720px;
+  top: 600px;
+  }
+
+ /*second img circles*/
+  #c6{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 200px;
+  top: -100px;
+  }
+
+  #c7{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 200px;
+  top: 70px;
+  }
+
+ /*third img circles*/
+  #c8{
+  background-color: var(--creamsuger);
+  width: 200px;
+  height: 200px;
+  left: 180px;
+  top: 550px;
+  }
+
+  #c9{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 250px;
+  top: 600px;
+  }
+
+ /*fourth img circles*/
+  #c10{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 720px;
+  top: -70px;
+  }
+
+  #c11{
+  background-color: var(--creamsuger);
+  width: 250px;
+  height: 250px;
+  left: 190px;
+  top: 600px;
+
+  }
+
+
+/* Rest of your existing CSS */
+/* ... */
+
+/* HEADER */
+
+#brand {
+  font-family: "goudy";
+  color: #272d2d;
+  opacity: 80%;
+  width: 100%;
+  top: -100px;
+  z-index: 1000;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.hero-section {
+  color: #272d2d;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding-top: 200px; /* Adjusted padding-top */
+  z-index: 1000;
+  text-align: center;
+  position: relative;
+}
+
+#animated-title span {
+  display: inline-block;
+  font-family: "knewave";
+  font-size: 8rem; /* Adjusted font size */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 1s ease, opacity 2s ease;
+}
+
+#about-me {
+  font-family: "goudy";
+  font-size: 1.8rem; /* Adjusted font size */
+  padding-left: 20px; /* Adjusted padding */
+  padding-right: 20px; /* Adjusted padding */
+  font-style: italic;
+}
+
+/* IMG AND TEXT */
+
+
+.image-container {
+  max-width: 50%; /* Adjusted max-width */
+  margin: 0px auto; /* Adjusted margin */
+  display: flex;
+  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+  justify-content: center; /* Center the content */
+  align-items: center;
+  margin-bottom: 300px;
+}
+
+#image1,
+#image2,
+#image3,
+#image4 {
+  width: 100%; /* Adjusted width for full width on smaller screens */
+  height: auto;
+  border-radius: 8px;
   
-    #c2{
-    background-color:var(--apricot);
-    width: 200px;
-    height: 200px;
-    left: 950px;
-    top:500px;
-    }
+}
+
+.image-container p {
+  color: #3d3334;
+  font-size: 20px;
+  width: 100%;
+  text-align: center; /* Adjusted width for full width on smaller screens */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+/* Scroll-in styles */
+.scroll-in {
+  transform: translateY(20px); /* Adjusted transform */
+  opacity: 0;
+  transition: all 2.0s;
+}
+
+/* Trigger animations on scroll */
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
   
-    #c3{
+  }
+
+
+
+  @media screen and (min-device-width : 430px)
+                      and (max-device-width: 820px) {
+    
+    /* FONTS & COLORS */
+
+/* (No changes in this section) */
+
+:root {
+  --paper: #fffaf1;
+  --ink: #272d2d;
+  --creamsuger: #fad9ca;
+  --grass: #e9e98e;
+  --apricot: #f3ac70;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "junction", serif;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  background-color: var(--paper);
+}
+
+/* CIRCLES */
+
+
+#c1{
+  background-color:var(--creamsuger);
+  width: 150px;
+  height: 150px;
+  left: 60px;
+  top: 120px;
+  }
+
+  #c2{
+  background-color:var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 600px;
+  top:120px;
+  }
+
+  #c3{
     background-color: var(--grass);
     width: 150px;
     height: 150px;
-    left: 870px;
-    top: 600px;
-    }
-  
-  /*first img circles*/
-    #c4{
-    background-color: var(--apricot);
-    width: 350px;
-    height: 350px;
-    left: -100px;
-    top: -150px;
-    }
-  
-    #c5{
-    background-color: var(--creamsuger);
-    width: 250px;
-    height: 250px;
-    left: 520px;
-    top: 650px;
-    }
-  
-   /*second img circles*/
-    #c6{
-    background-color: var(--grass);
-    width: 300px;
-    height: 300px;
-    left: -50px;
-    top: -120px;
-    }
-  
-    #c7{
-    background-color: var(--apricot);
-    width: 250px;
-    height: 250px;
-    left: -80px;
-    top: 70px;
-    }
-  
-   /*third img circles*/
-    #c8{
-    background-color: var(--creamsuger);
-    width: 250px;
-    height: 250px;
-    left: -50px;
-    top: 600px;
-    }
-  
-    #c9{
-    background-color: var(--grass);
-    width: 300px;
-    height: 300px;
-    left: 0px;
-    top: 700px;
-    }
-  
-   /*fourth img circles*/
-    #c10{
-    background-color: var(--apricot);
-    width: 250px;
-    height: 250px;
-    left: -50px;
-    top: -100px;
-    }
-  
-    #c11{
-    background-color: var(--creamsuger);
-    width: 300px;
-    height: 300px;
-    left: 520px;
-    top: 650px;
-  
-    }
-
-
-    #info{
-      padding-top: 450px;
-      padding-left: 20rem;
-    }
-
-    .image-container {
-      margin-bottom: 250px;
-      flex-direction: column;
-      max-width: 600px;
-      
-      
-      
+    left: 550px;
+    top: 220px;
   }
 
-  #image1, #image3 {
-    
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 10px;
-    position: relative;
-    z-index: 1;
+/*first img circles*/
+  #c4{
+  background-color: var(--apricot);
+  width: 250px;
+  height: 250px;
+  left: 120px;
+  top: -100px;
+  }
+
+  #c5{
+  background-color: var(--creamsuger);
+  width: 150px;
+  height: 150px;
+  left: 520px;
+  top: 450px;
+  }
+
+ /*second img circles*/
+  #c6{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 120px;
+  top: -100px;
+  }
+
+  #c7{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 150px;
+  top: 70px;
+  }
+
+ /*third img circles*/
+  #c8{
+  background-color: var(--creamsuger);
+  width: 200px;
+  height: 200px;
+  left: 100px;
+  top: 370px;
+  }
+
+  #c9{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 160px;
+  top: 450px;
+  }
+
+ /*fourth img circles*/
+  #c10{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 500px;
+  top: -70px;
+  }
+
+  #c11{
+  background-color: var(--creamsuger);
+  width: 250px;
+  height: 250px;
+  left: 120px;
+  top: 400px;
+
+  }
+
+
+
+
+/* Rest of your existing CSS */
+/* ... */
+
+/* HEADER */
+
+#brand {
+  font-family: "goudy";
+  color: #272d2d;
+  opacity: 80%;
+  width: 100%;
+  top: -100px;
+  z-index: 1000;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.hero-section {
+  color: #272d2d;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding-top: 200px; /* Adjusted padding-top */
+  z-index: 1000;
+  text-align: center;
+  position: relative;
+}
+
+#animated-title span {
+  display: inline-block;
+  font-family: "knewave";
+  font-size: 5rem; /* Adjusted font size */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 1s ease, opacity 2s ease;
+}
+
+#about-me {
+  font-family: "goudy";
+  font-size: 1.2rem; /* Adjusted font size */
+  padding-left: 20px; /* Adjusted padding */
+  padding-right: 20px; /* Adjusted padding */
+  font-style: italic;
+}
+
+/* IMG AND TEXT */
+
+
+.image-container {
+  max-width: 50%; /* Adjusted max-width */
+  margin: 0px auto; /* Adjusted margin */
+  display: flex;
+  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+  justify-content: center; /* Center the content */
+  align-items: center;
+  margin-bottom: 300px;
+}
+
+#image1,
+#image2,
+#image3,
+#image4 {
+  width: 100%; /* Adjusted width for full width on smaller screens */
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-container p {
+  color: #3d3334;
+  font-size: 20px;
+  width: 100%;
+  text-align: center; /* Adjusted width for full width on smaller screens */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 
-
-#image2, #image4 {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-left: 10px;
-    position: relative;
-    z-index: 1;
-    
+/* Scroll-in styles */
+.scroll-in {
+  transform: translateY(20px); /* Adjusted transform */
+  opacity: 0;
+  transition: all 2.0s;
 }
 
-  .image-container p {
-    color: #3d3334;
-    font-size: 25px;
-    width: 100%;
-    text-align: center;
-
-
+/* Trigger animations on scroll */
+.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
   
   }
+
+
+
+  @media screen and (min-device-width : 325px)
+  and (max-device-width: 430px) {
+
+/* FONTS & COLORS */
+
+/* (No changes in this section) */
+html, body{
+  height: 120%;
+}
+
+:root {
+--paper: #fffaf1;
+--ink: #272d2d;
+--creamsuger: #fad9ca;
+--grass: #e9e98e;
+--apricot: #f3ac70;
+}
+
+body {
+min-height: 100vh;
+overflow-x: hidden;
+font-family: "junction", serif;
+margin: 0;
+padding: 0;
+align-items: center;
+background-color: var(--paper);
+overflow-y: auto;
+}
+
+/* CIRCLES */
+
+ /*header circles*/
+
+ #c1{
+  background-color:var(--creamsuger);
+  width: 150px;
+  height: 150px;
+  left: 60px;
+  top: 120px;
+  }
+
+  #c2{
+  background-color:var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 560px;
+  top:120px;
+  }
+
+  #c3{
+    background-color: var(--grass);
+    width: 150px;
+    height: 150px;
+    left: 500px;
+    top: 220px;
+  }
+
+/*first img circles*/
+  #c4{
+  background-color: var(--apricot);
+  width: 250px;
+  height: 250px;
+  left: 15px;
+  top: -100px;
+  }
+
+  #c5{
+  background-color: var(--creamsuger);
+  width: 150px;
+  height: 150px;
+  left: 580px;
+  top: 650px;
+  }
+
+ /*second img circles*/
+  #c6{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 15px;
+  top: -100px;
+  }
+
+  #c7{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 15px;
+  top: 70px;
+  }
+
+ /*third img circles*/
+  #c8{
+  background-color: var(--creamsuger);
+  width: 200px;
+  height: 200px;
+  left: 15px;
+  top: 570px;
+  }
+
+  #c9{
+  background-color: var(--grass);
+  width: 250px;
+  height: 250px;
+  left: 50px;
+  top:  650px;
+  }
+
+ /*fourth img circles*/
+  #c10{
+  background-color: var(--apricot);
+  width: 200px;
+  height: 200px;
+  left: 15px;
+  top: -70px;
+  }
+
+  #c11{
+  background-color: var(--creamsuger);
+  width: 250px;
+  height: 250px;
+  left: 500px;
+  top: 600px;
+
+  }
+
+/* Rest of your existing CSS */
+/* ... */
+
+/* HEADER */
+
+#brand {
+font-family: "goudy";
+color: #272d2d;
+opacity: 80%;
+width: 100%;
+top: -100px;
+z-index: 1000;
+text-align: center;
+font-size: 1rem;
+}
+
+.hero-section {
+color: #272d2d;
+margin: 0 auto;
+width: 160%;
+height: auto;
+padding-top: 200px;/* Adjusted padding-top */
+z-index: 1000;
+text-align: center;
+position: relative;
+padding-left: 25%;
+}
+
+#animated-title span {
+display: inline-block;
+font-family: "knewave";
+font-size: 5rem; /* Adjusted font size */
+opacity: 0;
+transform: translateY(-20px);
+transition: transform 1s ease, opacity 2s ease;
+}
+
+#about-me {
+font-family: "goudy";
+font-size: 1.2rem; /* Adjusted font size */
+padding-left: 20px; /* Adjusted padding */
+padding-right: 20px; /* Adjusted padding */
+font-style: italic;
+}
+
+/* IMG AND TEXT */
+
+
+.image-container {
+width: 200%; /* Adjusted max-width */
+margin: 0; /* Adjusted margin */
+display: flex;
+flex-direction: column;
+flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+justify-content: space-between; /* Center the content */
+align-items: center;
+box-sizing: border-box;
+margin-bottom: 2px;
+padding: 0px 100px;
+
+
+}
+
+#image1,
+#image2,
+#image3,
+#image4 {
+width: 100%; /* Adjusted width for full width on smaller screens */
+height: auto;
+border-radius: 15px;
+padding: 0px 2px;
+margin: 0;
+
+
+}
+
+.image-container p {
+color: #3d3334;
+font-size: 25px;
+width: auto;
+text-align: center; /* Adjusted width for full width on smaller screens */
+padding: 0px 2px;
+min-height: 50vh;
+}
+
+#p4{
+  min-height: 100vh;
+}
+
+.fade-in-section {
+opacity: 0;
+transition: opacity 0.5s;
+}
+
+
+/* Scroll-in styles */
+.scroll-in {
+transform: translateY(20px); /* Adjusted transform */
+opacity: 0;
+transition: all 2.0s;
+}
+
+/* Trigger animations on scroll */
+.visible {
+transform: translateY(0);
+opacity: 1;
+}
+
+}
